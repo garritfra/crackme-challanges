@@ -1,26 +1,22 @@
-#include <iostream>
-
-void LOG(std::string str)
-{
-  std::cout << str << std::endl;
-}
+#include <stdio.h>
+#include <strings.h>
 
 int main(int argc, char const *argv[])
 {
   if (argc != 2)
   {
-    LOG("Usage: login <password>");
+    printf("Usage: %s <password>\n", argv[0]);
     return 1;
   }
   else if (argc == 2)
   {
     if (strcmp(argv[1], "mypassword") == 0)
     {
-      LOG("Access Granted!");
+      printf("Access Granted\n");
     }
     else
     {
-      LOG("Invalid Password!");
+      printf("Invalid Password!\n");
     }
   }
   return 0;
